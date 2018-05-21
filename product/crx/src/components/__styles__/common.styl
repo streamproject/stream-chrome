@@ -1,0 +1,79 @@
+@import "./variables.styl"
+
+// Commonly used classes.
+.popup
+  width 400px
+  height 600px
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-content center
+
+.label
+  font-family $work-sans
+  font-size 16px
+  line-height 2
+  font-weight 300
+
+.text
+  font-family $work-sans
+  font-size 14px
+  line-height 2
+  color $dark
+
+.small
+  font-family $work-sans
+  font-size 12px
+  line-height 2
+  color $dark
+
+.caption
+  font-family $work-sans
+  font-size 10px
+  line-height 1.6
+  color $business-blue
+  opacity 0.5
+
+.h1
+  font-family $work-sans
+  font-size 24px
+
+.h2
+  font-family $work-sans
+  font-size 16px
+
+.container
+  padding 0 40px
+  align-self stretch
+
+.title
+  @extend .h1
+  @extend .container
+  text-align center
+  margin-top 40px
+  margin-bottom 24px
+  color $business-blue
+  overflow-wrap break-word
+
+.navigation
+  @extend .container
+  display flex
+  margin-top auto
+  margin-bottom 32px
+
+.hide
+  visibility hidden
+
+a.link-underline
+  color $business-blue
+  text-decoration underline
+
+  &:hover, &:focus, &:active
+    color $retrofuturism-red
+
+// TODO: Deprecate these
+.row, .column
+  width auto
+
+.invisible
+  visibility hidden

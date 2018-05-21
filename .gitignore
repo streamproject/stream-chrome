@@ -1,0 +1,14 @@
+**/node_modules
+**/dist
+**/.DS_Store
+**/.postgres_data
+**/.postgres_test_data
+**/.blockchain_data
+**/secrets
+*.pem
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/*.env

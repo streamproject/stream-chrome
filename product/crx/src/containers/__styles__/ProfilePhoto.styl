@@ -1,0 +1,32 @@
+@import "../../components/__styles__/variables"
+@import "../../components/__styles__/common"
+
+.photo-container
+  display block
+  margin-top 42px
+
+.camera-icon
+  display block
+  background-image url("/static/camera.svg")
+  width 48px
+  height 48px
+  background-size 48px 48px
+
+.preview-container
+  align-items center
+  cursor pointer
+  display flex
+  justify-content center
+  height 224px
+  width 224px
+  border solid 1px rgba(39, 45, 105, 0.1)
+  border-radius 50%
+  overflow hidden
+
+// TODO: Figure out css to make good circular crops...
+.photo
+  max-width 100%
+  max-height 100%
+
+.uploadButton
+  display none

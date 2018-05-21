@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans")
+// HACK. Apply this style globally instead of running it through the postcss scopify plugin.
+// Ideally, we'd add another class to dimmerClasses here
+// https://github.com/Semantic-Org/Semantic-UI-React/blob/master/src/modules/Modal/Modal.js#L336
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/modal.min.css")
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dimmer.min.css")
+@import "../../../components/__styles__/variables"
+@import "../../../components/__styles__/common"
+
+:global(.stream-crx) :global(.ui.button).button
+  width 206px
+  height 36px
+  padding 0
+  display flex
+  align-items center
+  justify-content center
+  border-radius 4px
+  background-image linear-gradient(109deg, rgb(101, 115, 255), rgb(72, 86, 231) 11%, rgb(72, 86, 231) 11%, rgb(72, 86, 231) 12%, rgb(44, 45, 107) 81%, rgb(112, 42, 131))
+  box-shadow 0 8px 8px 0 rgba(0, 0, 0, 0.15)
+
+  .logo-icon
+    width 10px
+    height 16px
+    margin-right 8px
+
+  .label
+    align-content center
+    text-transform uppercase
+    font-size 12px
+
+:global(.modals) :global(.mini.modal.stream-crx)
+  border-radius 4px
+  width fit-content !important
+  height fit-content !important
+
+.close-icon
+  opacity 0.5
+  width 24px
+  height 24px
+  position absolute
+  right 25px
+  top 25px
+  cursor pointer
+  z-index 10
+
+  &:active: &:hover
+    opacity 1

@@ -1,0 +1,43 @@
+@import "../../components/__styles__/variables.styl"
+
+.message-bar
+  height 56px !important
+  padding-left 40px
+  padding-top 22px
+  background-image $gradient-gray !important
+
+.list
+ height 464px
+ overflow-y auto
+ margin 0 !important
+
+.list-item
+  height 120px !important
+  display flex !important
+
+  .list-icon
+    margin-left 40px
+    margin-top 16px
+    background-image $logo-clear
+    background-size 32px 32px
+    background-color $business-blue
+    border-radius 16px
+    width 32px
+    height 32px
+
+  .content
+    margin-top 16px
+    margin-left 24px
+    width 264px
+
+    .amount
+      color $thingamajig-teal
+
+    .date
+      float right
+      display inline
+      font-size 10px
+
+    .message
+      line-height 1.71
+      margin-top 12px

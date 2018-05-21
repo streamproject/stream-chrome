@@ -1,0 +1,144 @@
+@import "../../../components/__styles__/variables"
+@import "../../../components/__styles__/common"
+@import "../../../components/__styles__/TextField"
+
+
+:global(.modals) :global(.mini.modal.stream-crx) >:global(.content)
+  width 400px
+  height 500px
+  position relative
+  padding 0
+  z-index 1
+
+.card, .account-circle-container, :global(.modals) :global(.mini.modal.stream-crx) >:global(.content)
+  display flex !important
+  flex-direction column
+  justify-content space-between
+  align-items stretch
+
+.modal-error
+  width 120px
+  height 120px
+  margin-bottom 40px
+  margin-top 60px
+
+.tip
+  margin-bottom 30px
+  margin-top 16px
+
+.confirm
+  margin-top 40px
+  margin-bottom 40px
+
+.account-circle-container, .message, .card, .stream-logo-header
+  z-index 1
+
+.account-circle-container
+  margin-top 65px
+  align-items center
+
+p.message
+  color white
+  text-align center
+  margin-top 24px
+  flex 0 0 auto
+  max-width 320px
+  align-self center
+
+.card
+  flex 1
+  margin 16px
+  border-radius 4px
+  background-color white
+  border solid 1px rgb(228, 228, 228)
+  padding 16px 24px
+  justify-content space-between
+
+.stream-button
+  margin-top 20px !important
+  flex 0 0 auto
+
+.stream-logo-header
+  width 90px
+  height 24px
+  position absolute
+  left 25px
+  top 25px
+
+.equals
+  flex 0 0 auto
+  font-family $works-sans
+  font-size 14px
+  color $gray
+  width 32px
+  padding-bottom 8px
+  text-align center
+
+.message-field
+  margin-top 5px
+
+.str-error-message
+  @extends .error-message
+  text-align left
+  flex 0 0 auto
+  margin-top 5px
+
+.banner, .pending-transaction
+  position absolute
+  top 0
+  left 0
+  right 0
+
+.banner
+  width 100%
+  height 280px
+  background-image $gradient
+  z-index -1
+
+.pending-transaction
+  bottom 0
+  height 100%
+  width 100%
+  border-radius 4px
+  background-color rgba(255, 255, 255, 0.9)
+  z-index 2
+
+  .column
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    height 100%
+
+  .loading-icon
+    width 64px
+    height 64px
+
+  .message
+    color $dark
+
+.grinning
+  width 100%
+  position absolute
+  right 0
+  left 0
+  bottom 0
+
+:global(.modals) :global(.mini.modal.stream-crx) >:global(.content)
+
+  &.basic-error, &.completed
+    justify-content center
+
+  &.completed, &.basic-error
+    align-items center
+
+    .message
+      color $dark
+      line-height 2
+      text-align center
+      margin-top 0
+
+    .header-text
+      margin-top 80px
+      color $business-blue
+      margin-bottom 16px

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans")
+@import "./variables"
+
+// TODO: Refactor this into a single interface with the global .stream-crx modifier we add to semantic-ui.min.css
+.global
+  font-family $work-sans
+
+  a
+    color $dark
+    cursor pointer
+
+    &:hover, &:focus, &:active
+      color $retrofuturism-red
+
+body:global(.stream-crx)
+  margin 0 !important
+  padding 0
+  border none

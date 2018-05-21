@@ -1,0 +1,66 @@
+@require "../../components/__styles__/variables"
+
+.tx-history
+  background-color rgb(246, 248, 249)
+  padding 16px
+  display flex
+  flex-direction column
+  align-items stretch
+  overflow-y auto
+  align-self stretch
+
+  .tx-group
+
+    .tx-item
+      border-radius 4px
+      background-color white
+      box-shadow 0 2px 16px 0 rgba(218, 218, 218, 0.5), inset 0 -1px 0 0 rgb(247, 247, 247)
+      padding 16px
+      display flex
+      align-items flex-start
+      justify-content flex-start
+      background-color white
+
+      &:hover
+        background-color transparent
+
+      &.pending
+        opacity 0.5
+
+      .amount
+        color $thingamajig-teal
+
+      &.is-sender .amount
+        color $retrofuturism-red
+
+.tx-title, .tx-caption
+  overflow-wrap break-word
+  line-height 1.5
+  position relative
+
+.tx-caption, .tx-action
+  margin-top 5px
+
+.stream-badge
+  display flex
+  flex 0 0 24px
+  width 24px
+  height 24px
+  margin-right 14px
+  justify-content center
+  align-items center
+  background-color rgb(255, 255, 255)
+  box-shadow 1px 2px 0 0 rgb(236, 239, 241)
+  border solid 1px rgb(207, 216, 220)
+  border-radius 50%
+
+.stream-icon
+  background-image $logo
+  background-size 8px 12px
+  width 8px
+  height 12px
+
+.label
+  color gray
+  text-align center
+  margin-bottom 16px

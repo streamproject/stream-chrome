@@ -1,0 +1,33 @@
+@import "../../components/__styles__/variables.styl"
+
+.banner-container
+  height 240px
+  background-image linear-gradient(to bottom, $business-blue, rgb(44, 45, 107) 35%, rgb(112, 42, 131))
+
+.banner-container, .banner
+  display flex
+  align-items center
+  justify-content center
+
+.banner
+  background-color white
+  border-radius 50%
+  width 160px
+  height 160px
+  flex-direction column
+
+.text
+  margin-bottom 32px
+
+.mark-icon
+  background-image $mark
+  background-size 55px 80px
+  width 55px
+  height 80px
+  margin-bottom 8px
+
+.number
+  font-family $work-sans
+  font-size 24px
+  color business-blue
+

@@ -1,0 +1,88 @@
+@import "../../components/__styles__/variables.styl"
+
+.directions, .error-message
+  font-family $work-sans
+  font-size 10px
+
+.directions
+  margin-bottom 8px
+  color $gray
+
+.error-message
+  color $retrofuturism-red
+  margin-top 8px
+
+  a
+    color $retrofuturism-red
+    text-decoration underline
+
+.text-field:global(.ui):global(.input)
+  display flex
+  align-items baseline
+  font-family $work-sans
+  color $gray
+  font-size 16px
+  border-bottom 1px $gray solid
+  padding-bottom 8px
+  line-height 1
+
+  input
+    padding 0
+    border-radius 0
+    border none
+    background none !important
+    background-color rgba(0,0,0,0)
+    font-family inherit
+    font-size inherit
+    color inherit
+    line-height inherit
+
+    // Hide the up/down arrows on number input
+    // https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+      -webkit-appearance none
+      margin 0
+
+  &.populated, &:focus-within
+    color $business-blue
+    border-bottom 1px $thingamajig-teal solid
+
+.night-mode .text-field:global(.ui):global(.input)
+  border-bottom 1px solid $white
+
+  input
+    color $white
+
+  &.populated, &:focus-within
+    border-bottom 1px $thingamajig-teal solid
+
+.error
+
+  .directions
+    color $retrofuturism-red
+
+  .text-field:global(.ui):global(.input)
+    border-bottom 1px $retrofuturism-red solid !important
+
+.check-icon, .error-icon, .left-label, .right-label
+  flex 0 0 auto
+
+.right-label, .check-icon, .error-icon
+  margin-left 0.2em
+
+.left-label
+  margin-right 0.2em
+
+.check-icon
+  display block
+  background-image $check
+  background-size 16px 16px
+  width 16px
+  height 16px
+
+.error-icon
+  display block
+  background-image $error
+  background-size 10px 10px
+  width 10px
+  height 10px

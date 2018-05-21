@@ -1,0 +1,7 @@
+# testing build
+version: '3.1'
+
+services:
+  db:
+    volumes:
+      - ./.postgres_test_data:/var/lib/postgresql/data

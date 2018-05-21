@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="32" viewBox="0 0 22 32">
+    <defs>
+        <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#EB2B4F"/>
+            <stop offset="100%" stop-color="#B62A8B"/>
+        </linearGradient>
+        <path id="a" d="M13.864.349c.2-.196.462-.294.724-.294.263 0 .525.098.725.295.4.394.4 1.03 0 1.423L3.543 13.31h1.193l8.676-8.688a1.038 1.038 0 0 1 1.45-.014.993.993 0 0 1 .014 1.423l-7.27 7.28h1.15l5.16-5.109a1.038 1.038 0 0 1 1.448-.005.993.993 0 0 1 .006 1.423l-3.727 3.69h8.697c.411 0 .782.241.943.613.161.371.08.801-.205 1.092L4.723 31.674c-.2.205-.469.308-.738.308a1.03 1.03 0 0 1-.71-.282.993.993 0 0 1-.027-1.423L17.93 15.322h-1.2L4.932 26.904c-.2.197-.462.295-.724.295-.262 0-.525-.098-.725-.295a.994.994 0 0 1 0-1.423l10.346-10.16h-1.18l-7.52 7.42a1.03 1.03 0 0 1-.726.297c-.261 0-.523-.097-.723-.292a.994.994 0 0 1-.004-1.424l6.082-6H1.067c-.415 0-.788-.246-.947-.622a.993.993 0 0 1 .223-1.097L13.864.35z"/>
+        <linearGradient id="c" x1="50%" x2="50%" y1=".811%" y2="100%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+        <linearGradient id="e" x1="44.293%" x2="44.293%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+        <linearGradient id="f" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="d" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="url(#b)" xlink:href="#a"/>
+        <path fill="url(#c)" d="M5.883 12.158L4.737 13.31h2.87l1.15-1.15z" mask="url(#d)"/>
+        <path d="M12.42 13.74l-1.147 1.151h2.871l1.15-1.15z" mask="url(#d)"/>
+        <path fill="url(#c)" d="M9.936 12.158L8.758 13.31h2.88l1.169-1.15z" mask="url(#d)"/>
+        <path fill="url(#e)" d="M12.683 16.472h2.875l1.171-1.15h-2.896z" mask="url(#d)"/>
+        <path fill="url(#f)" d="M9.759 15.322l-1.157 1.15h2.87l1.179-1.15z" mask="url(#d)"/>
+    </g>
+</svg>

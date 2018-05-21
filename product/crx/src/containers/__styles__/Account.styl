@@ -1,0 +1,45 @@
+@require "../../components/__styles__/variables"
+
+.table
+  margin-top 24px
+
+.row
+  display flex
+  align-items center
+  height 28px
+
+.value
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+  flex 1
+
+.connectedAccounts-label, .label
+  font-weight bolder
+
+.connectedAccounts-label
+  margin-bottom 12px
+
+.label
+  margin-right 16px
+  flex 0 0 120px
+
+.accountCircle
+  margin-top -48px
+
+.accountCircle-container
+  display flex
+  justify-content center
+  align-items flex-start
+
+a.edit-icon
+  display block
+  background-image $edit
+  background-size 10px 10px
+  width 11px
+  height 11px
+  flex 0 0 11px
+  visibility hidden
+
+.row:hover a.edit-icon
+  visibility visible

@@ -1,0 +1,57 @@
+# staging build
+# > docker-machine env stream-staging
+# https://github.com/julianespinel/stockreader/wiki/Deploy-to-AWS-using-docker-machine-and-docker-compose
+# https://stackoverflow.com/questions/46487684/docker-compose-cannot-find-new-node-module
+# https://github.com/docker/compose/issues/4337
+version: '3.1'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+    ports:
+      - "80:5000"
+    env_file:
+      - ./backend.env
+      - ./postgres.env
+    secrets:
+      - TOKEN_SECRET
+      - POSTGRES_PASS
+      - TWITCH_SECRET
+      - GOOGLE_SECRET
+      - TWILIO_API_KEY
+      - INFURA_ACCESS_TOKEN
+      - MNEMONIC
+      - PHONE_SALT_HASH
+      - EMAIL_ACCOUNT
+      - EMAIL_PASS
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+secrets:
+  TOKEN_SECRET:
+    file: ./secrets/TOKEN_SECRET.txt
+  POSTGRES_PASS:
+    file: ./secrets/POSTGRES_PASS.txt
+  TWITCH_SECRET:
+    file: ./secrets/TWITCH_SECRET.txt
+  GOOGLE_SECRET:
+    file: ./secrets/GOOGLE_SECRET.txt
+  TWILIO_API_KEY:
+    file: ./secrets/TWILIO_API_KEY.txt
+  INFURA_ACCESS_TOKEN:
+    file: ./secrets/INFURA_ACCESS_TOKEN.txt
+  MNEMONIC:
+    file: ./secrets/MNEMONIC.txt
+  PHONE_SALT_HASH:
+    file: ./secrets/PHONE_SALT_HASH.txt
+  EMAIL_ACCOUNT:
+    file: ./secrets/EMAIL_ACCOUNT.txt
+  EMAIL_PASS:
+    file: ./secrets/EMAIL_PASS.txt

@@ -1,0 +1,6 @@
+node_modules
+contracts/dependencies
+
+# The token's constants describing it don't follow this rules.
+contracts/token/STCToken.sol
+test/token/mocks/NormalToken.sol

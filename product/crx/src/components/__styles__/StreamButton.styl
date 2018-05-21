@@ -1,0 +1,30 @@
+@import "../../components/__styles__/variables.styl"
+@import "../../components/__styles__/common.styl"
+
+.Button:global(.ui.button)
+  border-radius 16px
+  border none
+  height 64px
+  background-color $cool-gray
+  color white
+  text-transform uppercase
+  font-weight bold
+  font-family $work-sans
+  font-size 16px
+  opacity 0.75
+  align-self stretch
+  padding 0
+
+  &:hover, &:focus, &:active
+    opacity 1
+    color white
+
+  &.primary
+    background-color $thingamajig-teal
+
+  &.secondary
+    color $cool-gray
+    background none
+
+  &.disabled
+    opacity 0.25

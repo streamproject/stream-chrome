@@ -1,0 +1,37 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "Shared models, styles, etc between backend, CRX and web",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@types/bluebird": "^3.5.18",
+    "bignumber.js": "^4.1.0",
+    "bluebird": "^3.5.1",
+    "ethereumjs-util": "^5.1.2",
+    "ethjs": "^0.3.0",
+    "web3": "^1.0.0-beta.27"
+  },
+  "devDependencies": {
+    "@types/bignumber.js": "^4.0.3",
+    "awesome-typescript-loader": "^3.3.0",
+    "css-loader": "^0.28.7",
+    "exports-loader": "^0.6.4",
+    "file-loader": "^1.1.5",
+    "glob": "^7.1.2",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.19.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "types-ethereumjs-util": "0.0.5",
+    "typescript": "^2.6.1",
+    "typescript-eslint-parser": "^8.0.1",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1"
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_error_black_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Error-(Metamask-is-off)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-780.000000, -432.000000)">
+        <g id="ic_error_black_24px" transform="translate(780.000000, 432.000000)">
+            <polygon id="Shape" points="0 0 120 0 120 120 0 120"></polygon>
+            <path d="M60,0 C26.88,0 0,26.88 0,60 C0,93.12 26.88,120 60,120 C93.12,120 120,93.12 120,60 C120,26.88 93.12,0 60,0 Z M66,90 L54,90 L54,78 L66,78 L66,90 Z M66,66 L54,66 L54,30 L66,30 L66,66 Z" id="Shape" fill="#EC2B50" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

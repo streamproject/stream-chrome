@@ -1,0 +1,47 @@
+@import "../../components/__styles__/variables.styl"
+
+.text
+  margin-bottom 24px
+
+.platforms-container
+  margin-bottom 40px
+
+.icon
+  display block
+
+:global(.ui):global(.button)
+
+  &.youtube, &.twitch
+    height 48px
+    display flex !important
+    align-items center
+    justify-content flex-start
+    text-transform none
+    padding 0 50px
+    border-radius 4px
+    opacity 0.75
+    margin-bottom 16px
+
+    &:hover, &:active, &:focus
+      opacity 1
+
+
+  &.youtube
+    background-color rgb(255, 0, 0)
+
+    .icon
+      background-image url("/static/platforms/youtube.svg")
+      background-size 24px 24px
+      width 24px
+      height 24px
+      margin-right 16px
+
+  &.twitch
+    background-color rgb(101, 66, 166)
+
+    .icon
+      background-image url("/static/platforms/twitch.svg")
+      background-size 16px 16px
+      width 16px
+      height 16px
+      margin-right 23px

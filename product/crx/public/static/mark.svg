@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="80" viewBox="0 0 54 80">
+    <defs>
+        <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#EB2B4F"/>
+            <stop offset="100%" stop-color="#B62A8B"/>
+        </linearGradient>
+        <path id="a" d="M34.66.872c.5-.49 1.156-.735 1.81-.735.657 0 1.313.246 1.813.738 1 .984.999 2.577-.003 3.558L8.86 33.273h2.982l21.69-21.72a2.596 2.596 0 0 1 3.624-.035 2.483 2.483 0 0 1 .036 3.558L19.02 33.273h2.874l12.896-12.77a2.595 2.595 0 0 1 3.623-.013 2.483 2.483 0 0 1 .015 3.557l-9.317 9.226H50.853c1.028 0 1.956.602 2.358 1.532.402.928.2 2.003-.514 2.73l-40.888 41.65a2.58 2.58 0 0 1-1.846.77c-.64 0-1.28-.234-1.777-.705a2.483 2.483 0 0 1-.066-3.556l36.704-37.39h-3.001L12.333 67.26c-.5.49-1.156.736-1.811.736a2.578 2.578 0 0 1-1.812-.736c-1-.983-1-2.576 0-3.558l25.866-25.4h-2.95l-18.8 18.552c-.5.494-1.158.741-1.816.741a2.58 2.58 0 0 1-1.808-.732 2.484 2.484 0 0 1-.008-3.558l15.203-15.002H2.668A2.563 2.563 0 0 1 .3 36.75a2.483 2.483 0 0 1 .558-2.742L34.66.872z"/>
+        <linearGradient id="c" x1="50%" x2="50%" y1=".811%" y2="100%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+        <linearGradient id="e" x1="44.293%" x2="44.293%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+        <linearGradient id="f" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#6F2A82" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6F2A82"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="d" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="url(#b)" xlink:href="#a"/>
+        <path fill="url(#c)" d="M14.707 30.396l-2.865 2.877h7.178l2.874-2.877z" mask="url(#d)"/>
+        <path d="M31.048 34.351l-2.865 2.877h7.177l2.875-2.877z" mask="url(#d)"/>
+        <path fill="url(#c)" d="M24.841 30.396l-2.947 2.877h7.203l2.92-2.877z" mask="url(#d)"/>
+        <path fill="url(#e)" d="M31.708 41.18h7.187l2.928-2.876h-7.24z" mask="url(#d)"/>
+        <path fill="url(#f)" d="M24.397 38.304l-2.893 2.876h7.175l2.948-2.876z" mask="url(#d)"/>
+    </g>
+</svg>

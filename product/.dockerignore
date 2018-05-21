@@ -1,0 +1,14 @@
+.git
+
+*Dockerfile*
+*docker-compose*
+*README*
+
+.blockchain_data
+.postgres_data
+
+secrets
+
+**/.DS_Store
+**/node_modules
+**/dist

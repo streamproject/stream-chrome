@@ -1,0 +1,59 @@
+# development build
+version: '3.1'
+
+services:
+  backend:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile-development
+    expose:
+      - 9229
+    ports:
+      - "5000:5000"
+      # https://github.com/nodejs/node/issues/11591#issuecomment-303344844
+      - "9229:9229"
+    environment:
+      - ENV=development
+      - POSTGRES_HOST=db
+      - WEB3_PROVIDER_URI=http://web3-provider:8545
+      - STR_TOKEN_ADDRESS=
+    depends_on:
+      - db
+      - web3-provider
+    volumes:
+      - ./backend:/app/backend
+      - backend_node_modules:/app/backend/node_modules
+      - backend_dist:/app/backend/dist
+      - ./shared:/app/shared
+      - shared_node_modules:/app/shared/node_modules
+      - shared_dist:/app/shared/dist
+
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./postgres.env
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./.postgres_data:/var/lib/postgresql/data
+    secrets:
+      - POSTGRES_PASS
+
+  web3-provider:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    volumes:
+      - ./.blockchain_data:/blockchain_data
+      - ./web3-provider.sh:/web3-provider.sh
+    secrets:
+      - MNEMONIC
+    entrypoint: /web3-provider.sh
+
+volumes:
+  backend_node_modules:
+  backend_dist:
+  shared_node_modules:
+  shared_dist:
