@@ -2,7 +2,8 @@
 ### Welcome to the Stream CRX + Smart Contract Repo!
 #### We are very glad to have you here.
 
-![Screenshot](/wireframes/10%20-%20Dashboard/10.1%20-%20Dashboard.png?raw=True)
+<img src="/wireframes/10%20-%20Dashboard/10.1%20-%20Dashboard.png?raw=True" height="400" title="Screenshot">
+
 
 # Quick Overview
 If you would like to play with our chrome extension and run this locally, `cd` into `product` and run the `setup.sh` script and follow its instructions. It will require setting up developer accounts on google, twitch, infura, etc.
@@ -34,12 +35,6 @@ $ code .
 
 In addition, we prefer to use yarn over npm, so make sure not to use commands like `npm install` or `npm run watch`, but instead `yarn add` or `yarn run watch`. The two can sometimes cause conflicts with `node_modues`.
 
-### How to run
- - Open Docker.
- - Run `cd product/ && ./reset-packages.sh` if you just pulled from origin or if you're not feeling brave.
- - In one terminal, run `cd product/crx/ && yarn watch`, and in a second terminal, run `cd product/ && docker-compose up`.
- - Reload the CRX in `chrome://extensions/` inside your Chrome development profile.
-
 ## Basic Architecture
 The product repository consists of four main pieces:
 * [backend](/product/backend) - Although our extension is a dApp, there are pieces which require a centralized backend. This includes interacting with youtube/twitch, holding funds in escrow, and other functions that are simply easier done in a centralized manner until dApp related infrastructure is more mature.
@@ -54,7 +49,7 @@ Unfortunately, there are some additional steps required in the certain cases lis
 After adding the package, run `reset-pacakgaes.sh` so that docker swarm will update its volumes
 
 ### Making modifications to node_modules in crx
-For instance, any time you run `yarn install`. Until [redux-segment](https://github.com/rangle/redux-segment) releases a new version with https://github.com/rangle/redux-segment/pull/113, you will need to run `crx/fix-redux-segment.sh` after installing packages to crx
+For instance, any time you run `yarn install`. Until [redux-segment](https://github.com/rangle/redux-segment) releases a new version with https://github.com/rangle/redux-segment/pull/113, you will need to run `crx/fix-redux-segment.sh` after installing packages to crX
 
 ### Modifying `shared`
 Run `reset-packages.sh` so that crx and backend use the latest build of shared
