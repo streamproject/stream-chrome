@@ -1,6 +1,8 @@
 # HELLO
-## Welcome to the Stream CRX + Smart Contract Repo!
-### We are very glad to have you here.
+### Welcome to the Stream CRX + Smart Contract Repo!
+#### We are very glad to have you here.
+
+![Screenshot](/wireframes/10%20-%20Dashboard/10.1%20-%20Dashboard.png?raw=True)
 
 # Quick Overview
 If you would like to play with our chrome extension and run this locally, `cd` into `product` and run the `setup.sh` script and follow its instructions. It will require setting up developer accounts on google, twitch, infura, etc.
@@ -17,6 +19,9 @@ Navigate to `chrome://extensions/` and enable developer mode. Then, install the 
 
 ### Install MetaMask
 - Install the MetaMask Chrome extension. Set up your account. In the top left corner of the Chrome Extension, change the Network to "localhost:85XX".
+
+# Designs and Wireframes
+See [wireframes](/wireframes) if you'd like to see the designs and wireframes which are implemented in the crx.
 
 # Development Guide
 The project is in written in typescript, so it's recommended to use vscode or some other typescript compatbile editor that takes advantage of the types (e.g. webstorm). If you use vscode, use the workspace settings by setting the workspace to the root of this repo. If you do not use vscode, be aware that you should make sure to import the tslint settings another way (see `tslint.json`).
@@ -37,10 +42,10 @@ In addition, we prefer to use yarn over npm, so make sure not to use commands li
 
 ## Basic Architecture
 The product repository consists of four main pieces:
-* [backend](https://github.com/streamproject/stream-chrome/tree/master/product/backend) - Although our extension is a dApp, there are pieces which require a centralized backend. This includes interacting with youtube/twitch, holding funds in escrow, and other functions that are simply easier done in a centralized manner until dApp related infrastructure is more mature.
-* [crx](https://github.com/streamproject/stream-chrome/tree/master/product/crx) - This contains the code for the chrome extension itself
-* [shared](https://github.com/streamproject/stream-chrome/tree/master/product/shared) - Shared typescript models between the crx and the backend
-* [smart-contracts](https://github.com/streamproject/stream-chrome/tree/master/product/smart-contracts) - The smart-contracts for STR (stream tokens)
+* [backend](/product/backend) - Although our extension is a dApp, there are pieces which require a centralized backend. This includes interacting with youtube/twitch, holding funds in escrow, and other functions that are simply easier done in a centralized manner until dApp related infrastructure is more mature.
+* [crx](/product/crx) - This contains the code for the chrome extension itself
+* [shared](/product/shared) - Shared typescript models between the crx and the backend
+* [smart-contracts](/product/smart-contracts) - The smart-contracts for STR (stream tokens)
 
 ## Making Changes
 Unfortunately, there are some additional steps required in the certain cases listed below.
@@ -55,7 +60,7 @@ For instance, any time you run `yarn install`. Until [redux-segment](https://git
 Run `reset-packages.sh` so that crx and backend use the latest build of shared
 
 ### Updating Table Schemas
-If you would like to update the table schemas, do so in [init.sql](https://github.com/streamproject/stream-chrome/blob/master/product/docker-entrypoint-initdb.d/init.sql). After this, run `reset-db.sh`.
+If you would like to update the table schemas, do so in [init.sql](/product/docker-entrypoint-initdb.d/init.sql). After this, run `reset-db.sh`.
 
 ```
 cd product/
