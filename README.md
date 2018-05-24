@@ -6,7 +6,7 @@
 
 
 # Quick Overview
-If you would like to play with our chrome extension and run this locally, `cd` into `product` and run the `setup.sh` script and follow its instructions. It will require setting up developer accounts on google, twitch, infura, etc.
+If you would like to play with our chrome extension and run this locally, `cd` into `product` and run the `setup.sh` script and follow its instructions. It will walk you through the setup process ie setting up credentials, local developer env variables, a local blockchain and deployed stream token smart contract, etc. Note: this will also require you to setup developer accounts on external including AWS, twitch, youtube, google analytics, infura, sentry, segment and gmail.
 
 ```
 $ git clone https://github.com/streamproject/stream-chrome
@@ -25,7 +25,7 @@ Navigate to `chrome://extensions/` and enable developer mode. Then, install the 
 See [wireframes](/wireframes) if you'd like to see the designs and wireframes which are implemented in the crx.
 
 # Development Guide
-The project is in written in typescript, so it's recommended to use vscode or some other typescript compatbile editor that takes advantage of the types (e.g. webstorm). If you use vscode, use the workspace settings by setting the workspace to the root of this repo. If you do not use vscode, be aware that you should make sure to import the tslint settings another way (see `tslint.json`).
+The project is in written in typescript, so it's recommended to use vscode or some other typescript compatible editor that takes advantage of the types (e.g. webstorm). If you use vscode, use the workspace settings by setting the workspace to the root of this repo. If you do not use vscode, be aware that you should make sure to import the tslint settings another way (see `tslint.json`).
 
 ```
 $ git clone https://github.com/streamproject/stream-chrome
@@ -33,7 +33,7 @@ $ cd stream-chrome/
 $ code .
 ```
 
-In addition, we prefer to use yarn over npm, so make sure not to use commands like `npm install` or `npm run watch`, but instead `yarn add` or `yarn run watch`. The two can sometimes cause conflicts with `node_modues`.
+In addition, we chose to use yarn over npm, so make sure not to use commands like `npm install` or `npm run watch`, but instead `yarn add` or `yarn run watch`. There is only a `yarn.lock` and not a `package-lock.json` included in this repo so npm may install incorrect package versions.
 
 ## Basic Architecture
 The product repository consists of four main pieces:
@@ -46,7 +46,7 @@ The product repository consists of four main pieces:
 Unfortunately, there are some additional steps required in the certain cases listed below.
 
 ### Adding a node module to backend
-After adding the package, run `reset-pacakgaes.sh` so that docker swarm will update its volumes
+After adding the package, run `reset-packages.sh` so that docker swarm will update its volumes
 
 ### Making modifications to node_modules in crx
 For instance, any time you run `yarn install`. Until [redux-segment](https://github.com/rangle/redux-segment) releases a new version with https://github.com/rangle/redux-segment/pull/113, you will need to run `crx/fix-redux-segment.sh` after installing packages to crX
